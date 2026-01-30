@@ -7,6 +7,7 @@ module "Vms_app1" {
   num_of_vm = 1
   env = "dev"
   web_sg = [module.Web_SG01.web_sg_id]
+  user_data = file("scripts/nginx.sh")
 
 }
 
